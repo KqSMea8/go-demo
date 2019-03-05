@@ -18,8 +18,7 @@ type Product struct {
 var db *gorm.DB
 
 func initDb() {
-	//dbGorm, err := gorm.Open("mysql", "username:password@tcp(host:port)/database?charset=utf8&parseTime=True&loc=Local")
-	dbGorm, err := gorm.Open("mysql", "appclouddev:appcloud@tcp(10.8.121.175:3306)/appcloud_test?charset=utf8&parseTime=True&loc=Local")
+	dbGorm, err := gorm.Open("mysql", "username:password@tcp(host:port)/database?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		logs.Error("init db error:%v", err)
 		panic(fmt.Sprint("Init db: connect db error, %v", err))
